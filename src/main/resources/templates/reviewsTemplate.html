@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+</head>
+<body>
+<header>
+    <h2>Lists of All Reviews </h2>
+</header>
+
+<main>
+    <div>
+        <ul>
+            <li th:each="review: ${reviewsModel}">
+            <a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a>
+            </li>
+        </ul>
+    </div>
+</main>
+<br>
+<footer>&copy; cmsrimsson, 2022</footer>
+</body>
+</html>

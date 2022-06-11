@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title th:text="${reviewModel.title}">A Review</title>
+</head>
+
+<body>
+<header>
+    <h1 th:text="${reviewModel.title}">A Review</h1>
+</header>
+<main>
+    <ul>
+        <p><a href="/reviews">Home </a></p>
+
+        <li th:text="${reviewModel.title}"></li>
+    </ul>
+
+    <img th:src="${reviewModel.imgUrl}" style="width:250px;height:250px">
+
+    <h4 th:text="${reviewModel.description}"></h4>
+    <h4 th:text="${reviewModel.reviewCategory}"></h4>
+    <h4 th:text="${reviewModel.content}"></h4>
+
+</main>
+<br>
+<footer>&copy; cmsrimsson, 2022</footer>
+</body>
+</html>
